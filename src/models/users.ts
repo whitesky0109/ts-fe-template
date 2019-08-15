@@ -1,15 +1,16 @@
+// 3rd party libs
 import http, { AxiosResponse } from 'axios';
 
 export type IReqRsponse = AxiosResponse | null;
 
-export class BackendController {
+export class UserModel {
   private isReq: boolean;
 
   get isRunReq() {
     return this.isReq;
   }
 
-  async getUsers(page: number = 1, size: number = 10): Promise<IReqRsponse> {
+  async getUsers(page: number = 1, size: number = 30): Promise<IReqRsponse> {
     let result: IReqRsponse = null;
 
     if (this.isReq) {
@@ -33,6 +34,6 @@ export class BackendController {
   }
 }
 
-const backendCtrl = new BackendController();
+const userModel = new UserModel();
 
-export default backendCtrl;
+export default userModel;

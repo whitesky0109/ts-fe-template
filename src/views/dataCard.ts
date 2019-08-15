@@ -1,4 +1,4 @@
-import { IResultPayload } from 'models';
+import { IResultPayload } from 'types';
 
 import { createElement } from 'utils';
 
